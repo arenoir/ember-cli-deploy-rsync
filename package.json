@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-deploy-rsync",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Deploy ember-cli applications using rsync over ssh.",
   "directories": {
     "doc": "doc",
     "test": "tests"
