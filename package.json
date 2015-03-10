@@ -11,7 +11,7 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": "https://github.com/arenoir/ember-cli-deploy-rsync",
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -33,9 +33,14 @@
     "ember-export-application-global": "^1.0.2"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-cli-deploy-plugin"
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "dependencies": {
+    "core-object": "1.1.0",
+    "rsyncwrapper": "0.4.2"
   }
 }
