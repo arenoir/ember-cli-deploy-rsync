@@ -1,25 +1,35 @@
 # Ember-cli-deploy-rsync
 
-This README outlines the details of collaborating on this Ember addon.
+Deploy ember-cli applications using rsync over ssh.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* `npm install --save-dev ember-cli-deploy-rsync`
 
-## Running
+## Configuration
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+- `dest`: Rsync destination `user@my.cdn.com:/folder/`
+- `ssh`: Rsync over ssh.
+- `port`: Rsync ssh port.
+- `privateKey`: location of private key file to use for SSH connection
+- `args`: array of rsync args
 
-## Running Tests
 
-* `ember test`
-* `ember test --server`
+Example `config/deploy.js` to deploy to keycdn because cloudfront ssl is too expensive.
 
-## Building
+```
+/* jshint node: true */
 
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+module.exports = {
+  production: {
+    assets: {
+      type: 'rsync',
+      dest: "user@rsync.keycdn.com:zones/myzone/",
+      ssh: true,
+      port: 22,
+      privateKey: '~/.ssh/cdn-deployer',
+      args: ['-avz', '--no-p']
+    }
+  }
+};
+```
