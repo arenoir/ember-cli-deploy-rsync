@@ -7,4 +7,4 @@
 - inital release with package description.
 
 ### 0.0.0 (March 9, 2015)
-- inital release (copatiable with ember-cli-deploy < 5.0)
+- inital release (copatiable with ember-cli-deploy 0.4.x)
