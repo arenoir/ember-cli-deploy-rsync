@@ -3,7 +3,7 @@
 Deploy ember-cli applications using rsync over ssh.
 
 <hr/>
-**WARNING: This plugin is only compatible with ember-cli-deploy versions >= 0.5.0**
+**WARNING: The most recent version of this plugin is only compatible with ember-cli-deploy versions >= 0.5.0**
 <hr/>
 
 ## Installation
