@@ -2,34 +2,59 @@
 
 Deploy ember-cli applications using rsync over ssh.
 
+<hr/>
+**WARNING: This plugin is only compatible with ember-cli-deploy versions >= 0.5.0**
+<hr/>
+
 ## Installation
 
 * `npm install --save-dev ember-cli-deploy-rsync`
 
 ## Configuration
 
-- `dest`: Rsync destination `user@my.cdn.com:/folder/`
-- `ssh`: Rsync over ssh.
+- `dest`: Rsync destination `/folder/`
+- `host`: Rsync host `user@my.cdn.com`
+- `ssh`: Rsync over ssh (default: true)
+- `recursive`: Recurse into subdirectories (default: true).
+- `delete`: Delete files at destination, that are not in src (default: false).
+- `deleteAll`: Like delete, but also delete excluded files, see rsync manpage (default: false).
 - `port`: Rsync ssh port.
 - `privateKey`: location of private key file to use for SSH connection
 - `args`: array of rsync args
 
 
-Example `config/deploy.js` to deploy to keycdn because cloudfront ssl is too expensive.
+Example `config/deploy.js` to deploy with production and staging environments
 
-```
-/* jshint node: true */
 
-module.exports = {
-  production: {
-    assets: {
-      type: 'rsync',
-      dest: "user@rsync.keycdn.com:zones/myzone/",
-      ssh: true,
-      port: 22,
-      privateKey: '~/.ssh/cdn-deployer',
-      args: ['-avz', '--no-p']
+// deploy.js (sync)
+module.exports = function(environment){
+    var ENV = {
+    };
+
+    if (environment === 'production') {
+        ENV.rsync = {
+            type: 'rsync',
+            dest: "/var/www/app",
+            host: "production.company.com",
+            ssh: true,
+            recursive: true,
+            delete: true,
+            args: ["--verbose", "--rsync-path='sudo -u www-data rsync'", "-ztl"]
+        }
     }
-  }
+
+    if (environment === 'stage') {
+        ENV.rsync = {
+            type: 'rsync',
+            dest: "/var/www/app",
+            host: "stage.company.com",
+            ssh: true,
+            recursive: true,
+            delete: true,
+            args: ["--verbose", "-ztl"]
+        }
+    }
+
+    return ENV;
 };
-```
+
