@@ -3,8 +3,8 @@
 
 var BasePlugin = require('ember-cli-deploy-plugin');
 var Promise = require('ember-cli/lib/ext/promise');
-var SilentError = require('ember-cli/lib/errors/silent');
-var Rsync = require("rsyncwrapper").rsync;
+var SilentError = require('silent-error');
+var Rsync = require('rsyncwrapper').rsync;
 
 module.exports = {
     name: 'ember-cli-deploy-rsync',
@@ -23,7 +23,7 @@ module.exports = {
             requiredConfig: ['dest'],
 
             didBuild: function(context) {
-                //do something amazing here once the project has been built
+                // Do something amazing here once the project has been built
             },
 
             upload: function(context) {
@@ -57,11 +57,10 @@ module.exports = {
             },
 
             didDeploy: function(context) {
-                //do something here like notify your team on slack
+                // Do something here like notify your team on slack
             }
         });
 
         return new DeployPlugin();
     }
-
 }
