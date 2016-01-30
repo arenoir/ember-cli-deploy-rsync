@@ -1,5 +1,8 @@
 # Ember CLI deploy rsync
 
+### 0.0.3 (January 30, 2016)
+- [#8](https://github.com/arenoir/ember-cli-deploy-rsync/pull/8) Fix deprecation warning
+
 ### 0.0.2 (November 11, 2015)
 - [#5](https://github.com/arenoir/ember-cli-deploy-rsync/pull/5) Upgraded to ember-cli-deploy 0.5
 
