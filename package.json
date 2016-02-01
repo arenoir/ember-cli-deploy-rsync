@@ -15,7 +15,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Aaron Renoir <aaron@catzo.com> (http://aaronrenoir.com)",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.0",
@@ -42,6 +42,7 @@
   "dependencies": {
     "core-object": "1.1.0",
     "ember-cli-deploy-plugin": "^0.2.0",
-    "rsyncwrapper": "0.4.2"
+    "rsyncwrapper": "0.4.2",
+    "silent-error": "^1.0.0"
   }
 }
