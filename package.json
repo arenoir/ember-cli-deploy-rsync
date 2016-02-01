@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-rsync",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Deploy ember-cli applications using rsync over ssh.",
   "directories": {
     "doc": "doc",
