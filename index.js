@@ -45,9 +45,10 @@ module.exports = {
                 return new Promise(function(resolve, reject) {
                     Rsync(options, function (error, stdout, stderr, cmd)  {
                         if (error) {
+                            that.log(cmd);
                             that.log(stdout);
                             that.log(stderr);
-                            reject(new SilentError('Unable to sync!'));
+                            reject(new SilentError('Unable to sync! ' + error));
                         } else {
                             that.log(stdout);
                             resolve();
