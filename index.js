@@ -2,7 +2,7 @@
 'use strict';
 
 var BasePlugin = require('ember-cli-deploy-plugin');
-var Promise = require('ember-cli/lib/ext/promise');
+var Promise = require('rsvp').Promise;
 var SilentError = require('silent-error');
 var Rsync = require('rsyncwrapper').rsync;
 
