@@ -1,5 +1,8 @@
 # Ember CLI deploy rsync
 
+### 0.0.5 (March 28, 2017)
+- [#14](https://github.com/arenoir/ember-cli-deploy-rsync/pull/14) Fix `ember-cli/ext/promise` Deprecation for Ember CLI >=2.12.0
+
 ### 0.0.4 (February 1, 2016)
 - [#10](https://github.com/arenoir/ember-cli-deploy-rsync/pull/10) Add `silent-error` as dependency + @arenoir as author.
 
