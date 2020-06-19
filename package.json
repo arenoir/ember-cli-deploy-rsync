@@ -1,49 +1,49 @@
 {
-  "name": "ember-cli-deploy-rsync",
-  "version": "0.0.5",
-  "description": "Deploy ember-cli applications using rsync over ssh.",
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
-  },
-  "scripts": {
-    "start": "ember server",
-    "build": "ember build",
-    "test": "ember test"
-  },
-  "repository": "https://github.com/arenoir/ember-cli-deploy-rsync",
-  "engines": {
-    "node": ">= 0.10.0"
-  },
-  "author": "Aaron Renoir <aaron@catzo.com> (http://aaronrenoir.com)",
-  "license": "MIT",
-  "devDependencies": {
-    "broccoli-asset-rev": "^2.0.0",
-    "ember-cli": "0.2.0",
-    "ember-cli-app-version": "0.3.2",
-    "ember-cli-babel": "^4.0.0",
-    "ember-cli-content-security-policy": "0.3.0",
-    "ember-cli-dependency-checker": "0.0.8",
-    "ember-cli-htmlbars": "0.7.4",
-    "ember-cli-ic-ajax": "0.1.1",
-    "ember-cli-inject-live-reload": "^1.3.0",
-    "ember-cli-qunit": "0.3.9",
-    "ember-cli-uglify": "1.0.1",
-    "ember-data": "1.0.0-beta.15",
-    "ember-export-application-global": "^1.0.2"
-  },
-  "keywords": [
-    "ember-addon",
-    "ember-cli-deploy-plugin"
-  ],
-  "ember-addon": {
-    "configPath": "tests/dummy/config"
-  },
-  "dependencies": {
-    "core-object": "1.1.0",
-    "ember-cli-deploy-plugin": "^0.2.0",
-    "rsvp": "^3.5.0",
-    "rsyncwrapper": "0.4.2",
-    "silent-error": "^1.0.0"
-  }
+    "name": "ember-cli-deploy-rsync",
+    "version": "0.0.5",
+    "description": "Deploy ember-cli applications using rsync over ssh.",
+    "directories": {
+        "doc": "doc",
+        "test": "tests"
+    },
+    "scripts": {
+        "start": "ember server",
+        "build": "ember build",
+        "test": "ember test"
+    },
+    "repository": "https://github.com/arenoir/ember-cli-deploy-rsync",
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "author": "Aaron Renoir <aaron@catzo.com> (http://aaronrenoir.com)",
+    "license": "MIT",
+    "devDependencies": {
+        "broccoli-asset-rev": "^3.0.0",
+        "ember-cli": "3.18.0",
+        "ember-cli-app-version": "3.2.0",
+        "ember-cli-babel": "^7.21.0",
+        "ember-cli-content-security-policy": "1.1.1",
+        "ember-cli-dependency-checker": "3.2.0",
+        "ember-cli-htmlbars": "5.1.2",
+        "ember-cli-ic-ajax": "1.0.0",
+        "ember-cli-inject-live-reload": "^2.0.2",
+        "ember-cli-qunit": "4.4.0",
+        "ember-cli-uglify": "3.0.0",
+        "ember-data": "3.19.0",
+        "ember-export-application-global": "^2.0.1"
+    },
+    "keywords": [
+        "ember-addon",
+        "ember-cli-deploy-plugin"
+    ],
+    "ember-addon": {
+        "configPath": "tests/dummy/config"
+    },
+    "dependencies": {
+        "core-object": "3.1.5",
+        "ember-cli-deploy-plugin": "^0.2.9",
+        "rsvp": "^4.8.5",
+        "rsyncwrapper": "3.0.1",
+        "silent-error": "^1.1.1"
+    }
 }

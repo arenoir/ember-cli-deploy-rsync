@@ -4,7 +4,7 @@
 var BasePlugin = require('ember-cli-deploy-plugin');
 var Promise = require('rsvp').Promise;
 var SilentError = require('silent-error');
-var Rsync = require('rsyncwrapper').rsync;
+var Rsync = require('rsyncwrapper');
 
 module.exports = {
     name: 'ember-cli-deploy-rsync',
@@ -43,7 +43,7 @@ module.exports = {
 
                 var that = this;
                 return new Promise(function(resolve, reject) {
-                    Rsync(options, function (error, stdout, stderr, cmd)  {
+                    Rsync(options, function(error, stdout, stderr, cmd) {
                         if (error) {
                             that.log(cmd);
                             that.log(stdout);
